@@ -1,5 +1,5 @@
 # python-mysql
-对pymysql的二次封装，让你免去写sql语句的麻烦（暂适用于Python3.5）
+对pymysql的二次封装，让你免去写sql语句的麻烦（暂仅适用于Python3.5）
 
 ## 如何使用？
 假设你的数据库test中有这样一张表student
