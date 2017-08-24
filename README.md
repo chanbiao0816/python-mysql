@@ -70,19 +70,24 @@ ID | name | score
 ```
 mysql.rollback()
 ```
+
 **- 5 替换操作**
+
 ```
 data = {'id': 3, name': 'rose', 'score': 90}
 mysql.replace(table_name, data)
 ```
+
 若数据在表中不存在，则插入数据；
 
 若数据已经存在（字段中必须有不重复字段unique、primary_key），则更新数据。得到结果：
+
 ID | name | score
 ---|---|---
 1 | leo | 60 
 2 | tom | 70
 3 | rose | 90
+
 
 **- 6 更新操作**
 
@@ -92,9 +97,10 @@ condition = {'id': 2}
 mysql.update(table_name, data, condition)
 ```
 得到结果：
+
 ID | name | score
 ---|---|---
-1 | leo | 60 
+1 | leo | 60
 2 | tom | 93
 3 | rose | 90
 
@@ -105,6 +111,7 @@ condition = 'score > 80'
 mysql.delete(table_name, condition)
 ```
 得到结果：
+
 ID | name | score
 ---|---|---
 1 | leo | 60 
@@ -117,7 +124,9 @@ data_matrix = [
 ]
 mysql.excuteMany(table_name, fields, data_matrix)
 ```
+
 得到结果：
+
 ID | name | score
 ---|---|---
 1 | leo | 60 
@@ -125,7 +134,6 @@ ID | name | score
 5 | jack | 75
 
 **- 9 查看数据库连接状态**
-
 
 ```
 state = mysql.get_state()
