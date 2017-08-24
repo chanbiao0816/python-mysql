@@ -13,14 +13,14 @@ ID | name | score
 **- 1 连接数据库**
 1. 直接连接
 ```
-mysql = MySQL()
+mysql = MySQL() # 单例模式
 if not mysql.connect(host, user, password, database):
     print('数据库连接失败，错误原因：', mysql.error)
 
 ```
 2. 通过配置文件连接
 ```
-mysql = MySQL()
+mysql = MySQL() # 单例模式
 if not mysql.connect_from_file('my.cnf'):
     print('数据库连接失败，错误原因：', mysql.error)
 
